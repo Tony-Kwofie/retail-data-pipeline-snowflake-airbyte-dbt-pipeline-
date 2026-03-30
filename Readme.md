@@ -58,18 +58,25 @@ Power BI
 (Reporting & Analytics)
 ```
 
----
-
 # 📸 Pipeline Execution
 
+### Architecture Overview
+![Architecture](screenshots/architecture.gif)
+
+---
+
 ### Airbyte Data Sync
-![Airbyte Sync](screenshots/airbyte_sync.png)
+![Airbyte Sync](screenshots/airbyte_sync.jpg)
+
+---
 
 ### Schema Configuration
-![Airbyte Schema](screenshots/airbyte_schema.png)
+![Airbyte Schema](screenshots/airbyte_schema.jpg)
+
+---
 
 ### Snowflake Data Validation
-![Snowflake Validation](screenshots/snowflake_validation.png)
+![Snowflake Validation](screenshots/snowflake_validation.jpg)
 
 ---
 
