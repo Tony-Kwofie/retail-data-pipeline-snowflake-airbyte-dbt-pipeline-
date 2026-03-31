@@ -1,0 +1,33 @@
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'acmemart_pipeline'
+version: '1.0.0'
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'acmemart_pipeline'
+
+# These configurations specify where dbt should look for different types of files.
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# directories to be removed by `dbt clean`
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+models:
+  acmemart_pipeline:
+
+    # Silver Layer (Staging)
+    staging:
+      +materialized: view
+
+    # Gold Layer (Marts)
+    marts:
+      +materialized: table

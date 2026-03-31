@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: fct_transactions
+    columns:
+      - name: product_id
+        tests:
+          - relationships:
+              to: ref('dim_product')
+              field: product_id
+
+      - name: store_id
+        tests:
+          - relationships:
+              to: ref('dim_store')
+              field: store_id
+
+  - name: dim_product
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_store
+    columns:
+      - name: store_id
+        tests:
+          - unique
+          - not_null
