@@ -27,7 +27,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 
 ## 🏗 Architecture
 
-![Pipeline Architecture](IMG/pipeline_architecture.PNG)
+![Pipeline Architecture](images/pipeline_architecture.PNG)
 
 ---
 
@@ -35,7 +35,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 
 ### 1️⃣ Data Ingestion (Airbyte)
 
-![Airbyte Sync](IMG/airbyte_data_sync.jpg)
+![Airbyte Sync](images/airbyte_data_sync.jpg)
 
 - Automated ingestion from Google Drive  
 - Incremental loading with deduplication  
@@ -45,7 +45,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 
 ### 2️⃣ Schema Configuration
 
-![Airbyte Schema](IMG/airbyte_schema_config.jpg)
+![Airbyte Schema](images/airbyte_schema_config.jpg)
 
 - Incremental + Append + Deduped mode  
 - Primary key: `transaction_id`  
@@ -54,7 +54,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 
 ### 3️⃣ Data Validation
 
-![Validation](IMG/data_validation_rowcount.jpg)
+![Validation](images/data_validation_rowcount.jpg)
 
 - Verified record count consistency (11,268 rows)  
 - Confirms successful ingestion  
@@ -70,7 +70,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 
 ## ⚪ Silver Layer (Staging)
 
-![Silver Layer](IMG/silver_staging_view.jpg)
+![Silver Layer](images/silver_staging_view.jpg)
 
 - Cleaned and standardized dataset  
 - Data type casting and null handling  
@@ -80,7 +80,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 
 ## 🟡 Gold Layer (Analytics)
 
-![Gold Layer](IMG/gold_fact_transactions.jpg)
+![Gold Layer](images/gold_fact_transactions.jpg)
 
 ### 📊 Fact Table: `fct_transactions`
 
@@ -115,3 +115,52 @@ stg_acme
 fct_transactions
    ↓
 dim_product   dim_store
+✅ Data Quality
+
+Data integrity enforced using dbt tests:
+
+Primary key validation (unique, not null)
+Referential integrity between fact and dimensions
+
+Results:
+
+✔ 6 tests passed
+✔ 0 failures
+⚙️ How to Run
+dbt run
+dbt test
+dbt docs generate
+dbt docs serve
+🛠 Tech Stack
+Snowflake (Cloud Data Warehouse)
+Airbyte (Data Ingestion)
+dbt (Data Transformation)
+SQL
+Power BI (Analytics)
+📊 Business Impact
+Eliminates manual data consolidation workflows
+Creates a single source of truth for transactions
+Improves data consistency and reliability
+Enables scalable analytics and reporting
+🎯 Key Achievements
+Processed 11,268+ records with incremental loading
+Implemented deduplication using primary key
+Built star schema (fact + dimensions)
+Achieved 100% dbt test pass rate
+🔐 Notes
+
+Sensitive information (credentials, account IDs, configurations) has been removed or anonymized.
+
+👤 Author
+
+Anthony Eddei Kwofie
+Data Engineer
+
+🔗 GitHub: https://github.com/Tony-Kwofie
+
+
+---
+
+## 🔥 You’re now 100% good
+
+- ✅ Folder name matches → `images/`
