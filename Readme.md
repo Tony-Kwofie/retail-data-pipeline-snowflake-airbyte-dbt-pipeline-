@@ -127,11 +127,13 @@ Results:
 
 ✔ 6 tests passed
 ✔ 0 failures
+
 ⚙️ How to Run
 dbt run
 dbt test
 dbt docs generate
 dbt docs serve
+
 🛠 Tech Stack
 Snowflake (Cloud Data Warehouse)
 Airbyte (Data Ingestion)
@@ -144,12 +146,14 @@ Eliminates manual data consolidation workflows
 Creates a single source of truth for transactions
 Improves data consistency and reliability
 Enables scalable analytics and reporting
+
 🎯 Key Achievements
 Processed 11,268+ records with incremental loading
 Implemented deduplication using primary key
 Built star schema (fact + dimensions)
 Achieved 100% dbt test pass rate
 🔐 Notes
+
 
 Sensitive information (credentials, account IDs, configurations) has been removed or anonymized.
 
