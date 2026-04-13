@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: airbyte
+    database: AIRBYTE_DATABASE
+    schema: BRONZE
+    tables:
+      - name: ACME

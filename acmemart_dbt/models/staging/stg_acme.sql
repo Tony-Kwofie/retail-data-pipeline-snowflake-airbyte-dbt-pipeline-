@@ -1,0 +1,26 @@
+SELECT
+    -- IDs
+    TRANSACTION_ID,
+    CUSTOMER_ID,
+    PRODUCT_ID,
+    STORE_ID,
+
+    -- Product info
+    PRODUCT_NAME,
+    CATEGORY,
+
+    -- Payment
+    PAYMENT_METHOD,
+
+    -- Metrics (clean types)
+    CAST(QUANTITY AS INT)        AS QUANTITY,
+    CAST(UNIT_PRICE AS FLOAT)    AS UNIT_PRICE,
+    CAST(TOTAL_AMOUNT AS FLOAT)  AS TOTAL_AMOUNT,
+
+    -- Time
+    TRANSACTION_TIMESTAMP,
+    DATE(TRANSACTION_TIMESTAMP)  AS TRANSACTION_DATE
+
+FROM {{ source('airbyte', 'ACME') }}
+
+WHERE TOTAL_AMOUNT IS NOT NULL
