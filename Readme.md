@@ -35,7 +35,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 
 ### 1️⃣ Data Ingestion (Airbyte)
 
-![Airbyte Sync](images/airbyte_data_sync.jpg)
+![Airbyte Sync](images/airbyte_schema_config.jpg)
 
 - Automated ingestion from Google Drive  
 - Incremental loading with deduplication  
@@ -45,7 +45,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 
 ### 2️⃣ Schema Configuration
 
-![Airbyte Schema](images/airbyte_schema_config.jpg)
+![Airbyte Schema](images/airbyte_data_sync.jpg)
 
 - Incremental + Append + Deduped mode  
 - Primary key: `transaction_id`  
