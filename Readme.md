@@ -115,6 +115,7 @@ stg_acme
 fct_transactions
    ↓
 dim_product   dim_store
+
 ✅ Data Quality
 
 Data integrity enforced using dbt tests:
@@ -137,6 +138,7 @@ Airbyte (Data Ingestion)
 dbt (Data Transformation)
 SQL
 Power BI (Analytics)
+
 📊 Business Impact
 Eliminates manual data consolidation workflows
 Creates a single source of truth for transactions
@@ -161,6 +163,3 @@ Data Engineer
 
 ---
 
-## 🔥 You’re now 100% good
-
-- ✅ Folder name matches → `images/`
