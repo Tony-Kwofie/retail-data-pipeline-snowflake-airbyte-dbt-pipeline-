@@ -24,7 +24,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 ## 🔄 Data Ingestion (Airbyte)
 
 ### ✅ Data Sync Status
-![Airbyte Sync](IMG/airbyte_data_sync.png)
+![Airbyte Sync](images/airbyte_data_sync.png)
 
 - Automated ingestion from Google Drive  
 - Incremental loading with deduplication  
@@ -33,7 +33,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 ---
 
 ### ⚙️ Schema Configuration
-![Airbyte Schema](IMG/airbyte_schema_config.png)
+![Airbyte Schema](images/airbyte_schema_config.png)
 
 - Incremental + Append + Deduped mode  
 - Primary key: `transaction_id`  
@@ -49,7 +49,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 
 ## ⚪ Silver Layer (Staging)
 
-![Silver Layer](IMG/silver_staging_view.png)
+![Silver Layer](images/silver_staging_view.png)
 
 - Cleaned and standardized dataset  
 - Data type casting and null handling  
@@ -59,7 +59,7 @@ Data is ingested from **Google Drive via Airbyte**, stored in **Snowflake**, and
 
 ## 🟡 Gold Layer (Marts)
 
-![Gold Layer](IMG/gold_fact_transactions.png)
+![Gold Layer](images/gold_fact_transactions.png)
 
 ### 📊 Fact Table: `fct_transactions`
 
